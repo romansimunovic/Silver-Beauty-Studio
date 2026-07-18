@@ -58,7 +58,7 @@ export default function App() {
       </nav>
 
       {/* HERO */}
-      <header className="h-[90vh] flex flex-col items-center justify-center text-center px-6 bg-gradient-to-b from-[#FDF5F6] to-transparent">
+      <header className="h-[90vh] flex flex-col items-center justify-center text-center px-6 bg-linear-to-b from-[#FDF5F6] to-transparent">
         <p className="text-[10px] uppercase tracking-[0.4em] mb-4 text-[#C98B94] font-semibold">
           {SALON_CONFIG.subtitle}
         </p>

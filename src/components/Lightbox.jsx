@@ -19,7 +19,7 @@ export default function Lightbox({ image, setImage }) {
       className="
         fixed
         inset-0
-        z-[99999]
+        z-99999
 
         flex
         items-center

@@ -10,7 +10,7 @@ export default function NailsMakeupBooking() {
   const [service, setService] = useState("");
   const [slots, setSlots] = useState([]);
   const [selectedSlot, setSelectedSlot] = useState("");
-
+  const [selectedDate, setSelectedDate] = useState("");
   function handleDate(e) {
     const value = e.target.value;
     setDate(value);
@@ -87,17 +87,20 @@ export default function NailsMakeupBooking() {
           ))}
         </select>
 
-        <div className="relative">
-          <label className="block text-[10px] uppercase tracking-widest text-[#C98B94] mb-2">
-            Odaberi datum
-          </label>
-          <input
-            required
-            type="date"
-            onChange={handleDate}
-            className="w-full p-4 border border-[#EFCACF] rounded-xl bg-white text-[#4A3E3F] text-sm box-border focus:outline-none focus:ring-1 focus:ring-[#C98B94]"
-          />
-        </div>
+        <div className="w-full">
+  <label className="block text-sm font-medium text-[#4A3E3F] mb-2">
+    Odaberite datum posjeta
+  </label>
+  <div className="relative w-full">
+    <input
+      type="date"
+      value={selectedDate}
+      onChange={(e) => setSelectedDate(e.target.value)}
+      min={new Date().toISOString().split('T')[0]} // Sprječava odabir prošlih datuma
+      className="w-full min-w-0 max-w-full px-4 py-3.5 rounded-xl border border-[#C98B94]/20 bg-white text-[#4A3E3F] focus:outline-none focus:ring-2 focus:ring-[#C98B94] transition-all text-base appearance-none block box-border"
+    />
+  </div>
+</div>
 
         {slots.length > 0 && (
           <div className="space-y-3">
