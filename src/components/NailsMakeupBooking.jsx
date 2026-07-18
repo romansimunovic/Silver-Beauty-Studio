@@ -77,8 +77,8 @@ export default function NailsMakeupBooking() {
           </select>
         </div>
 
-        {/* 2. ODABIR DATUMA */}
-        <div className="space-y-2">
+        {/* 2. ODABIR DATUMA - Popravljena mobilna responzivnost */}
+        <div className="space-y-2 w-full max-w-full">
           <label className="text-[11px] uppercase tracking-wider font-bold text-[#4A3E3F]/80 flex items-center gap-2">
             <Calendar size={14} className="text-[#C98B94]" /> Odaberite datum
           </label>
@@ -88,9 +88,10 @@ export default function NailsMakeupBooking() {
             min={new Date().toISOString().split("T")[0]} // Onemogući prošle dane
             onChange={(e) => {
               setDate(e.target.value);
-              setTimeSlot(""); // Resetiraj sat ako se promijeni dan
+              setTimeSlot(""); 
             }}
-            className="w-full p-3.5 bg-[#FDF5F6]/50 border border-[#FDF5F6] rounded-xl text-sm focus:outline-hidden focus:border-[#C98B94] text-[#4A3E3F]"
+            className="block w-full max-w-full min-w-0 p-3.5 bg-[#FDF5F6]/50 border border-[#FDF5F6] rounded-xl text-sm text-[#4A3E3F] focus:outline-none focus:border-[#C98B94] box-border appearance-none"
+            style={{ width: '100%', minWidth: '100%' }} // Prisilno pregaženje za tvrdoglave mobilne preglednike
             required
           />
         </div>
