@@ -23,7 +23,7 @@ export default function Gallery({ setImage }) {
   return (
     <div className="space-y-8">
       {/* Filter kategorija */}
-      <div className="flex flex-wrap justify-center gap-3 text-[11px] font-medium uppercase tracking-widest">
+      <div className="flex flex-wrap justify-center gap-3 text-[13px] font-medium uppercase tracking-widest">
         {categories.map(cat => (
           <button
             key={cat}

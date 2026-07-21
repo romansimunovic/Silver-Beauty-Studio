@@ -65,10 +65,10 @@ export default function App() {
         {/* LIJEVA STRANA: Sadržaj */}
         <div className="flex flex-col justify-center items-start px-6 sm:px-12 md:px-16 py-12 space-y-6 bg-gradient-to-br from-[#FDF5F6]/60 via-transparent to-transparent order-2 md:order-1">
           <div className="space-y-2">
-            <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.4em] text-[#C98B94] font-semibold">
+            <p className="text-[10px] sm:text-[15px] uppercase tracking-[0.4em] text-[#C98B94] font-semibold">
               {SALON_CONFIG.subtitle}
             </p>
-            <div className="h-[2px] w-12 bg-[#C98B94]/40 mt-1" />
+            <div className="h-[1.5px] w-12 bg-[#C98B94]/40 mt-1" />
           </div>
           
           <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl leading-tight text-[#4A3E3F]">
@@ -76,7 +76,7 @@ export default function App() {
             <span className="italic text-[#C98B94]">za Vašu ljepotu</span>
           </h1>
           
-          <p className="text-xs sm:text-sm opacity-85 max-w-md leading-relaxed text-[#4A3E3F]/80">
+          <p className="text-base sm:text-lg opacity-85 max-w-md leading-relaxed text-[#4A3E3F]/80">
             Prepustite se stručnim rukama u ugodnom ambijentu našeg studija. 
             Specijalizirani za vrhunsku njegu noktiju, profesionalni make-up i savršen spray tan ten.
           </p>
@@ -84,15 +84,15 @@ export default function App() {
           <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
             <a 
               href="#booking" 
-              className="w-full sm:w-auto text-center bg-[#4A3E3F] text-white px-8 py-3.5 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-[#C98B94] hover:scale-105 transition-all shadow-sm"
+              className="w-full sm:w-auto text-center bg-[#4A3E3F] text-white px-8 py-3.5 rounded-full text-base sm:text-lg uppercase tracking-widest font-bold hover:bg-[#C98B94] hover:scale-105 transition-all shadow-sm"
             >
-              Rezerviraj termin
+              REZERVIRAJ
             </a>
             <a 
               href="#gallery" 
-              className="w-full sm:w-auto text-center border border-[#4A3E3F] text-[#4A3E3F] px-8 py-3.5 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-[#FDF5F6] transition-colors"
+              className="w-full sm:w-auto text-center border border-[#4A3E3F] text-[#4A3E3F] px-8 py-3.5 rounded-full text-base sm:text-lg uppercase tracking-widest font-bold hover:bg-[#FDF5F6] transition-colors"
             >
-              Pogledaj radove
+              Radovi
             </a>
           </div>
         </div>
@@ -116,31 +116,31 @@ export default function App() {
         <section className="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-16 py-8 border-y border-[#FDF5F6] w-full text-center">
           <div className="space-y-1">
             <p className="text-2xl font-serif">5.0★</p>
-            <span className="text-[10px] uppercase tracking-wider opacity-60 block">Google Ocjena</span>
+            <span className="text-[15px] uppercase tracking-wider opacity-60 block">Google Ocjena</span>
           </div>
           <div className="hidden sm:block h-8 w-[1px] bg-[#FDF5F6]" /> {/* Elegantni separator za desktop */}
           <div className="space-y-1">
             <p className="text-2xl font-serif">50+</p>
-            <span className="text-[10px] uppercase tracking-wider opacity-60 block">Klijentica</span>
+            <span className="text-[15px] uppercase tracking-wider opacity-60 block">Klijentica</span>
           </div>
           <div className="hidden sm:block h-8 w-[1px] bg-[#FDF5F6]" /> {/* Elegantni separator za desktop */}
           <div className="space-y-1">
             <p className="text-2xl font-serif">Premium</p>
-            <span className="text-[10px] uppercase tracking-wider opacity-60 block">Kvaliteta</span>
+            <span className="text-[15px] uppercase tracking-wider opacity-60 block">Kvaliteta</span>
           </div>
         </section>
 
         {/* SERVICES */}
         <section id="services">
-          <h2 className="font-serif text-2xl sm:text-3xl text-center mb-10 sm:mb-12">Naše Usluge</h2>
+          <h2 className="font-serif text-2xl sm:text-3xl text-center mb-10 sm:mb-12">Usluge</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {SALON_CONFIG.services.map((service, index) => (
               <div key={index} className="p-6 border border-[#FDF5F6] bg-white rounded-2xl hover:shadow-md transition-all flex flex-col justify-between">
                 <div>
                   <h3 className="font-serif text-lg sm:text-xl mb-3">{service.title}</h3>
-                  <p className="text-xs opacity-75 leading-relaxed mb-6">{service.desc}</p>
+                  <p className="text-base sm:text-lg opacity-75 leading-relaxed mb-6">{service.desc}</p>
                 </div>
-                <span className="text-[#7c444c] text-xs font-bold uppercase tracking-wider">{service.price}</span>
+                <span className="text-[#7c444c] text-base sm:text-lg font-bold uppercase tracking-wider">{service.price}</span>
               </div>
             ))}
           </div>
@@ -149,8 +149,8 @@ export default function App() {
         {/* GALLERY */}
         <section id="gallery" className="overflow-hidden">
           <h2 className="font-serif text-2xl sm:text-3xl text-center mb-2">Radovi</h2>
-          <p className="text-center text-xs opacity-60 mb-8 sm:mb-10 px-2">
-            Pogledajte rezultate naših ekskluzivnih tretmana
+          <p className="text-center text-base sm:text-lg opacity-60 mb-8 sm:mb-10 px-2">
+            Rezultati naših ekskluzivnih tretmana
           </p>
           <Gallery setImage={setSelectedImage} />
         </section>
@@ -166,8 +166,8 @@ export default function App() {
             ].map((item, index) => (
               <div key={index} className="text-center space-y-2 p-4">
                 <div className="text-[#C98B94] flex justify-center mb-2">{item.icon}</div>
-                <h3 className="uppercase font-bold text-xs tracking-wider">{item.title}</h3>
-                <p className="text-xs opacity-70 leading-relaxed max-w-sm mx-auto">{item.text}</p>
+                <h3 className="uppercase font-bold text-base sm:text-lg tracking-wider">{item.title}</h3>
+                <p className="text-base sm:text-lg opacity-70 leading-relaxed max-w-sm mx-auto">{item.text}</p>
               </div>
             ))}
           </div>

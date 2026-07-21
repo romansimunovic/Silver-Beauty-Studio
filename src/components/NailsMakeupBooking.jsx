@@ -54,15 +54,15 @@ export default function NailsMakeupBooking() {
   return (
     <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl p-6 sm:p-10 shadow-xs relative">
       <div className="text-center space-y-2 mb-8">
-        <h3 className="font-serif text-2xl sm:text-3xl text-[#4A3E3F]">Rezervirajte svoj termin</h3>
-        <p className="text-xs text-[#4A3E3F]/60">Brzo i jednostavno osigurajte svoje vrijeme za opuštanje</p>
+        <h3 className="font-serif text-2xl sm:text-3xl text-[#4A3E3F]">Rezerviraj svoj termin</h3>
+        <p className="text-basic text-[#4A3E3F]/60">Brzo i jednostavno osigurajte svoje vrijeme za opuštanje</p>
       </div>
 
       <form onSubmit={handleBookingSubmit} className="space-y-6">
         {/* 1. ODABIR USLUGE */}
         <div className="space-y-2">
-          <label className="text-[11px] uppercase tracking-wider font-bold text-[#4A3E3F]/80 flex items-center gap-2">
-            <Sparkles size={14} className="text-[#C98B94]" /> Odaberite uslugu
+          <label className="text-[13px] uppercase tracking-wider font-bold text-[#4A3E3F]/80 flex items-center gap-2">
+            <Sparkles size={14} className="text-[#C98B94]" />Odaberite uslugu
           </label>
           <select
             value={service}
@@ -79,7 +79,7 @@ export default function NailsMakeupBooking() {
 
         {/* 2. ODABIR DATUMA - Popravljena mobilna responzivnost */}
         <div className="space-y-2 w-full max-w-full">
-          <label className="text-[11px] uppercase tracking-wider font-bold text-[#4A3E3F]/80 flex items-center gap-2">
+          <label className="text-[13px] uppercase tracking-wider font-bold text-[#4A3E3F]/80 flex items-center gap-2">
             <Calendar size={14} className="text-[#C98B94]" /> Odaberite datum
           </label>
           <input
@@ -99,7 +99,7 @@ export default function NailsMakeupBooking() {
         {/* 3. SLOBODNI TERMINI (Prikazuju se tek kad klijentica klikne/odabere datum) */}
         {date && (
           <div className="space-y-3 pt-2 animate-fadeIn">
-            <label className="text-[11px] uppercase tracking-wider font-bold text-[#4A3E3F]/80 flex items-center gap-2">
+            <label className="text-[13px] uppercase tracking-wider font-bold text-[#4A3E3F]/80 flex items-center gap-2">
               <Clock size={14} className="text-[#C98B94]" /> Slobodni termini za {formatFriendlyDate(date)}
             </label>
             
@@ -129,7 +129,7 @@ export default function NailsMakeupBooking() {
         {timeSlot && (
           <div className="space-y-4 pt-4 border-t border-[#FDF5F6] text-left animate-fadeIn">
             <div className="space-y-2">
-              <label className="text-[11px] uppercase tracking-wider font-bold text-[#4A3E3F]/80 flex items-center gap-2">
+              <label className="text-[13px] uppercase tracking-wider font-bold text-[#4A3E3F]/80 flex items-center gap-2">
                 <User size={14} className="text-[#C98B94]" /> Vaše ime i prezime
               </label>
               <input
@@ -143,7 +143,7 @@ export default function NailsMakeupBooking() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-[11px] uppercase tracking-wider font-bold text-[#4A3E3F]/80 flex items-center gap-2">
+              <label className="text-[13px] uppercase tracking-wider font-bold text-[#4A3E3F]/80 flex items-center gap-2">
                 <Phone size={14} className="text-[#C98B94]" /> Broj mobitela (za podsjetnik)
               </label>
               <input
@@ -204,10 +204,10 @@ export default function NailsMakeupBooking() {
             </div>
 
             <h4 className="font-serif text-2xl text-[#4A3E3F] mb-2">Termin je rezerviran!</h4>
-            <p className="text-xs text-[#4A3E3F]/60 mb-6">Hvala Vam, {name}. Vaš zahtjev je uspješno zaprimljen.</p>
+            <p className="text-sm text-[#4A3E3F]/60 mb-6">Hvala Vam, {name}. Vaš zahtjev je uspješno zaprimljen.</p>
 
             {/* Kartica s pregledom detalja */}
-            <div className="bg-[#FDF5F6]/40 border border-[#FDF5F6] rounded-2xl p-4 text-left space-y-2.5 text-xs mb-6">
+            <div className="bg-[#FDF5F6]/40 border border-[#FDF5F6] rounded-2xl p-4 text-left space-y-2.5 text-sm mb-6">
               <p className="text-[#4A3E3F]/70"><strong className="text-[#4A3E3F]">Tretman:</strong> {service}</p>
               <p className="text-[#4A3E3F]/70"><strong className="text-[#4A3E3F]">Datum:</strong> {formatFriendlyDate(date)}</p>
               <p className="text-[#4A3E3F]/70"><strong className="text-[#4A3E3F]">Vrijeme:</strong> {timeSlot} h</p>
