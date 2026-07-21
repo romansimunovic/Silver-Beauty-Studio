@@ -55,7 +55,6 @@ export default function NailsMakeupBooking() {
     <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl p-6 sm:p-10 shadow-xs relative">
       <div className="text-center space-y-2 mb-8">
         <h3 className="font-serif text-2xl sm:text-3xl text-[#4A3E3F]">Rezerviraj svoj termin</h3>
-        <p className="text-basic text-[#4A3E3F]/60">Brzo i jednostavno osigurajte svoje vrijeme za opuštanje</p>
       </div>
 
       <form onSubmit={handleBookingSubmit} className="space-y-6">
@@ -130,7 +129,7 @@ export default function NailsMakeupBooking() {
           <div className="space-y-4 pt-4 border-t border-[#FDF5F6] text-left animate-fadeIn">
             <div className="space-y-2">
               <label className="text-[13px] uppercase tracking-wider font-bold text-[#4A3E3F]/80 flex items-center gap-2">
-                <User size={14} className="text-[#C98B94]" /> Vaše ime i prezime
+                <User size={14} className="text-[#C98B94]" /> Ime i prezime
               </label>
               <input
                 type="text"
@@ -181,7 +180,7 @@ export default function NailsMakeupBooking() {
               : "bg-[#4A3E3F]/10 text-[#4A3E3F]/40 cursor-not-allowed"
           }`}
         >
-          Dovrši rezervaciju
+          Rezerviraj termin
         </button>
       </form>
 

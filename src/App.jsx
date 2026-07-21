@@ -8,7 +8,7 @@ import Lightbox from "./components/Lightbox";
 const SALON_CONFIG = {
   name: "Silver Beauty Studio",
   owner: "Maja Kušljić",
-  subtitle: "Luxury Beauty Studio ✨",
+  subtitle: "Luxury Beauty Studio",
   address: "Josipa Jurja Strossmayera 29, 35000, Slavonski Brod",
   hours: "Radno vrijeme: Po dogovoru (uz najavu)",
   phone: "091 600 7938",
@@ -130,13 +130,10 @@ export default function App() {
         {/* GALLERY */}
         <section id="gallery" className="overflow-hidden">
           <h2 className="font-serif text-2xl sm:text-3xl text-center mb-2">Radovi</h2>
-          <p className="text-center text-base sm:text-lg opacity-60 mb-8 sm:mb-10 px-2">
-            Rezultati naših ekskluzivnih tretmana
-          </p>
           <Gallery setImage={setSelectedImage} />
         </section>
 
-        {/* O VLASNICI / PRIČA (ZAMIJENILA "ZAŠTO SILVER BEAUTY STUDIO") */}
+        {/* PRIČA O POČETKU */}
         <section id="about" className="bg-[#FDF5F6]/30 rounded-3xl p-6 sm:p-10 md:p-12 border border-[#FDF5F6]">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center">
             
@@ -155,12 +152,12 @@ export default function App() {
             <div className="md:col-span-7 order-2 md:order-1 space-y-5 text-center md:text-left">
               <div className="space-y-1">
                 <p className="text-lg uppercase tracking-[0.3em] text-[#C98B94] font-semibold">
-                  Upoznajte vlasnicu
+                  Priča o početku
                 </p>
                 <h2 className="font-serif text-2xl sm:text-4xl text-[#4A3E3F]">
                   Maja Kušljić
                 </h2>
-                <p className="text-sm sm:text-base uppercase tracking-widest text-[#4A3E3F]/60 font-medium">
+                <p className="text-sm italic sm:text-base uppercase tracking-widest text-[#4A3E3F]/60 font-medium">
                   Vlasnica i osnivačica Silver Beauty Studija
                 </p>
               </div>
@@ -168,9 +165,10 @@ export default function App() {
               <div className="h-[1px] w-16 bg-[#C98B94]/40 mx-auto md:mx-0 my-2" />
 
               <div className="space-y-4 text-sm sm:text-base opacity-85 leading-relaxed text-[#4A3E3F]">
-                <p>
-                  Ja sam Maja Kušljić, vlasnica i osnivačica Silver Beauty Studija. Prije 18 godina napravila sam prvi korak u svijet ljepote, i od tada, korak po korak, gradim mjesto u kojem se žene osjećaju lijepo, sigurno i njegovano.
-                </p>
+                <p>Ja sam Maja Kušljić, vlasnica i osnivačica Silver Beauty Studija.                 </p>
+                  
+                  <p>Prije 18 godina napravila sam prvi korak u svijet ljepote, i od tada, korak po korak, gradim mjesto u kojem se žene osjećaju lijepo, sigurno i njegovano.</p>
+
                 <p>
                   Silver Beauty Studio nastao je iz ljubavi prema estetici, detaljima i želje da svaka klijentica dobije više od same usluge, a to uključuje trenutak mira, pažnje i osjećaj zadovoljstva sobom.
                 </p>
@@ -179,7 +177,7 @@ export default function App() {
               {/* CITAT / MISIJA */}
               <div className="pt-2">
                 <blockquote className="italic font-serif text-base sm:text-lg text-[#C98B94] border-l-2 md:border-l-2 border-[#C98B94] pl-4 py-1 text-left bg-white/60 rounded-r-xl shadow-sm">
-                  Cilj je da svaka žena koja zakorači u salon ode sretnija i samopouzdanija nego što je došla. ✨
+                  Misija - da svaka žena koja zakorači u salon ode sretnija i samopouzdanija nego što je došla. 
                 </blockquote>
               </div>
             </div>
@@ -197,7 +195,7 @@ export default function App() {
           <div className="space-y-6">
             <h2 className="font-serif text-2xl sm:text-3xl text-center md:text-left mb-4">Gdje se nalazimo?</h2>
             
-            <div className="space-y-4 text-lg opacity-80 max-w-md mx-auto md:mx-0">
+            <div className="space-y-4 text-basic opacity-80 max-w-md mx-auto md:mx-0">
               <p className="flex gap-3 items-start">
                 <MapPin size={16} className="text-[#C98B94] shrink-0 mt-0.5"/> 
                 <span>{SALON_CONFIG.address}</span>
