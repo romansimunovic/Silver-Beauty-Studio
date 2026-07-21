@@ -197,7 +197,7 @@ export default function App() {
           <div className="space-y-6">
             <h2 className="font-serif text-2xl sm:text-3xl text-center md:text-left mb-4">Gdje se nalazimo?</h2>
             
-            <div className="space-y-4 text-xs opacity-80 max-w-md mx-auto md:mx-0">
+            <div className="space-y-4 text-lg opacity-80 max-w-md mx-auto md:mx-0">
               <p className="flex gap-3 items-start">
                 <MapPin size={16} className="text-[#C98B94] shrink-0 mt-0.5"/> 
                 <span>{SALON_CONFIG.address}</span>
