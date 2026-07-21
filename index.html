@@ -1,102 +1,58 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="hr" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primarni SEO Meta Tagovi -->
     <title>Silver Beauty Studio | Nokti, Make up & Spray Tan Slavonski Brod</title>
     <meta name="title" content="Silver Beauty Studio | Nokti, Make up & Spray Tan Slavonski Brod" />
-    <meta name="description" content="Ekskluzivni salon ljepote u Slavonskom Brodu (vlasnica Maja Kušljić). Profesionalno šminkanje za vjenčanja i prigode, gel nokti, trajni lak, manikura i savršen spray tan ten bez UV zračenja." />
-    <meta name="keywords" content="Silver Beauty Studio, Maja Kušljić, sminkanje Slavonski Brod, nokti Slavonski Brod, gel nokti, trajni lak, manikura, spray tan Slavonski Brod, salon ljepote Slavonski Brod, sminkanje za mladenke, šminka Brod" />
+    <meta name="description" content="Ekskluzivni salon ljepote u Slavonskom Brodu vlasnice Maje Kušljić. Profesionalno šminkanje, gel nokti, trajni lak, manikura i spray tan ten bez UV zračenja." />
+    <meta name="keywords" content="Silver Beauty Studio, Maja Kušljić, sminkanje Slavonski Brod, nokti Slavonski Brod, gel nokti, trajni lak, manikura, spray tan Slavonski Brod" />
     <meta name="author" content="Maja Kušljić" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://silverbeautystudio.netlify.app/" />
 
-    <!-- Geo / Lokalni SEO Tagovi -->
-    <meta name="geo.region" content="HR-12" />
-    <meta name="geo.placename" content="Slavonski Brod" />
-    <meta name="geo.position" content="45.153635;18.024844" />
-    <meta name="ICBM" content="45.153635, 18.024844" />
-
-    <!-- Open Graph / Facebook / WhatsApp / Instagram -->
-    <meta property="og:type" content="business.business" />
-    <meta property="og:site_name" content="Silver Beauty Studio" />
-    <meta property="og:url" content="https://silverbeautystudio.netlify.app/" />
-    <meta property="og:title" content="Silver Beauty Studio | Ekskluzivni Tretmani Ljepote Slavonski Brod" />
-    <meta property="og:description" content="Rezervirajte termin za profesionalni make up, nokte (gel/trajni lak) ili spray tan u Slavonskom Brodu. Individualan pristup i premium kvaliteta." />
-    <meta property="og:image" content="https://silverbeautystudio.netlify.app/images/makeup1.jpg" /> <!-- Puni URL radi stabilnijeg prikaza na društvenim mrežama -->
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="hr_HR" />
-
-    <!-- Twitter Previews -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Silver Beauty Studio | Slavonski Brod" />
-    <meta name="twitter:description" content="Profesionalno šminkanje, ugradnja i njega noktiju te spray tan u Slavonskom Brodu." />
-    <meta name="twitter:image" content="https://silverbeautystudio.netlify.app/images/makeup1.jpg" />
-
-    <!-- Google Fonts -->
+    <!-- Performance: Unaprijed spajanje na Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
-    <!-- JSON-LD Strukturirani podaci za lokalni SEO (Google Business/Maps povezivanje) -->
+    <!-- Preload kritičnih slika iznad preklopa (Hero & Vlasnica) za trenutno učitavanje -->
+    <link rel="preload" as="image" href="/images/banner.jpg" />
+    <link rel="preload" as="image" href="/images/vlasnica.jpg" />
+
+    <!-- JSON-LD SEO podaci -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BeautySalon",
       "name": "Silver Beauty Studio",
-      "image": "https://silverbeautystudio.netlify.app/images/makeup1.jpg",
+      "image": "https://silverbeautystudio.netlify.app/images/vlasnica.jpg",
       "@id": "https://silverbeautystudio.netlify.app/#salon",
       "url": "https://silverbeautystudio.netlify.app/",
-      "telephone": "+3859X1234567", 
+      "telephone": "+385916007938",
       "priceRange": "€€",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Ulica i kućni broj salona", 
+        "streetAddress": "Josipa Jurja Strossmayera 29",
         "addressLocality": "Slavonski Brod",
         "postalCode": "35000",
         "addressCountry": "HR"
       },
       "geo": {
-  "@type": "GeoCoordinates",
-  "latitude": 45.153634918639256,
-  "longitude": 18.02484421011561
-},
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "08:00",
-          "closes": "20:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "08:00",
-          "closes": "14:00"
-        }
-      ],
+        "@type": "GeoCoordinates",
+        "latitude": 45.153634918639256,
+        "longitude": 18.02484421011561
+      },
       "founder": {
         "@type": "Person",
         "name": "Maja Kušljić"
-      },
-      "sameAs": [
-        "https://www.facebook.com/vasi_facebook_profil",
-        "https://www.instagram.com/vasi_instagram_profil"
-      ]
+      }
     }
     </script>
   </head>
-  <body>
+  <body class="bg-[#FFFDFE] text-[#4A3E3F] antialiased selection:bg-[#C98B94]/20 selection:text-[#4A3E3F]">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

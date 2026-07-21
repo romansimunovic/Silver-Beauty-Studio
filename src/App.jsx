@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapPin, Clock, Palette, Brush, Sparkles, Mail, Phone } from "lucide-react";
+import { MapPin, Clock, Mail, Phone, Heart } from "lucide-react";
 
 import NailsMakeupBooking from "./components/NailsMakeupBooking";
 import Gallery from "./components/Gallery";
@@ -35,7 +35,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#FFFDFE] text-[#4A3E3F] font-sans scroll-smooth overflow-x-hidden">
       
-      {/* NAV - Prilagođen za sve ekrane */}
+      {/* NAV */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-[#FFFDFE]/90 backdrop-blur-md px-4 sm:px-6 py-4 flex justify-between items-center border-b border-[#FDF5F6]">
         <h1 className="font-serif text-sm sm:text-base md:text-lg tracking-widest uppercase truncate max-w-[70%]">
           {SALON_CONFIG.name}
@@ -59,7 +59,7 @@ export default function App() {
         </div>
       </nav>
 
-      {/* HERO - Urednički Split Layout (Savršeno responzivan) */}
+      {/* HERO */}
       <header className="min-h-[90vh] grid grid-cols-1 md:grid-cols-2 pt-16 md:pt-20 bg-[#FFFDFE] items-stretch">
         
         {/* LIJEVA STRANA: Sadržaj */}
@@ -76,9 +76,8 @@ export default function App() {
             <span className="italic text-[#C98B94]">za Vašu ljepotu</span>
           </h1>
           
-          <p className="text-base sm:text-lg opacity-85 max-w-md leading-relaxed text-[#4A3E3F]/80">
-            Prepustite se stručnim rukama u ugodnom ambijentu našeg studija. 
-            Specijalizirani za vrhunsku njegu noktiju, profesionalni make-up i savršen spray tan ten.
+          <p className="text-base sm:text-lg opacity-85 max-w-md leading-relaxed text-[#4A3E3F]/80"> 
+            Salon za vrhunsku njegu noktiju, profesionalni make-up i savršen spray tan ten.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
@@ -97,7 +96,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* DESNA STRANA: Facebook Banner bez preklapanja */}
+        {/* DESNA STRANA: Banner */}
         <div className="relative min-h-[35vh] sm:min-h-[45vh] md:min-h-0 order-1 md:order-2 overflow-hidden bg-black flex items-center">
           <img 
             src="/images/banner.jpg" 
@@ -112,24 +111,6 @@ export default function App() {
       {/* GLAVNI SADRŽAJ */}
       <main className="w-full max-w-4xl mx-auto px-4 sm:px-6 py-10 space-y-20 sm:space-y-28 overflow-x-hidden">
         
-        {/* TRUST / INFOBAR - POPRAVLJENO: Na mobitelu ide vertikalno, na desktopu horizontalno */}
-        <section className="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-16 py-8 border-y border-[#FDF5F6] w-full text-center">
-          <div className="space-y-1">
-            <p className="text-2xl font-serif">5.0★</p>
-            <span className="text-[15px] uppercase tracking-wider opacity-60 block">Google Ocjena</span>
-          </div>
-          <div className="hidden sm:block h-8 w-[1px] bg-[#FDF5F6]" /> {/* Elegantni separator za desktop */}
-          <div className="space-y-1">
-            <p className="text-2xl font-serif">50+</p>
-            <span className="text-[15px] uppercase tracking-wider opacity-60 block">Klijentica</span>
-          </div>
-          <div className="hidden sm:block h-8 w-[1px] bg-[#FDF5F6]" /> {/* Elegantni separator za desktop */}
-          <div className="space-y-1">
-            <p className="text-2xl font-serif">Premium</p>
-            <span className="text-[15px] uppercase tracking-wider opacity-60 block">Kvaliteta</span>
-          </div>
-        </section>
-
         {/* SERVICES */}
         <section id="services">
           <h2 className="font-serif text-2xl sm:text-3xl text-center mb-10 sm:mb-12">Usluge</h2>
@@ -155,21 +136,54 @@ export default function App() {
           <Gallery setImage={setSelectedImage} />
         </section>
 
-        {/* WHY */}
-        <section>
-          <h2 className="font-serif text-2xl sm:text-3xl text-center mb-10 sm:mb-12">Zašto Silver Beauty Studio?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-6">
-            {[
-              { icon: <Palette size={24} />, title: "Individualnost", text: "Svakom stilu i noktima pristupamo unikatno, naglašavajući Vašu osobnost." },
-              { icon: <Brush size={24} />, title: "Preciznost", text: "Estetska pedantnost i čiste linije ključ su svakog našeg uspješnog rada." },
-              { icon: <Sparkles size={24} />, title: "Dugotrajnost", text: "Koristimo isključivo certificirane i luksuzne materijale za vrhunski rezultat." }
-            ].map((item, index) => (
-              <div key={index} className="text-center space-y-2 p-4">
-                <div className="text-[#C98B94] flex justify-center mb-2">{item.icon}</div>
-                <h3 className="uppercase font-bold text-base sm:text-lg tracking-wider">{item.title}</h3>
-                <p className="text-base sm:text-lg opacity-70 leading-relaxed max-w-sm mx-auto">{item.text}</p>
+        {/* O VLASNICI / PRIČA (ZAMIJENILA "ZAŠTO SILVER BEAUTY STUDIO") */}
+        <section id="about" className="bg-[#FDF5F6]/30 rounded-3xl p-6 sm:p-10 md:p-12 border border-[#FDF5F6]">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            {/* MOBITEL: Slika ide na vrh; DESKTOP: Slika ide desno (col-span-5) */}
+            <div className="md:col-span-5 order-1 md:order-2 flex justify-center">
+              <div className="relative w-full max-w-sm aspect-[4/5] rounded-2xl overflow-hidden shadow-md border-4 border-white">
+                <img 
+                  src="/images/vlasnica.jpg" 
+                  alt="Maja Kušljić - Vlasnica i osnivačica Silver Beauty Studija" 
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
-            ))}
+            </div>
+
+            {/* TEKST / PRIČA: Na mobitelu ispod slike, na desktopu lijevo (col-span-7) */}
+            <div className="md:col-span-7 order-2 md:order-1 space-y-5 text-center md:text-left">
+              <div className="space-y-1">
+                <p className="text-lg uppercase tracking-[0.3em] text-[#C98B94] font-semibold">
+                  Upoznajte vlasnicu
+                </p>
+                <h2 className="font-serif text-2xl sm:text-4xl text-[#4A3E3F]">
+                  Maja Kušljić
+                </h2>
+                <p className="text-sm sm:text-base uppercase tracking-widest text-[#4A3E3F]/60 font-medium">
+                  Vlasnica i osnivačica Silver Beauty Studija
+                </p>
+              </div>
+
+              <div className="h-[1px] w-16 bg-[#C98B94]/40 mx-auto md:mx-0 my-2" />
+
+              <div className="space-y-4 text-sm sm:text-base opacity-85 leading-relaxed text-[#4A3E3F]">
+                <p>
+                  Ja sam Maja Kušljić, vlasnica i osnivačica Silver Beauty Studija. Prije 18 godina napravila sam prvi korak u svijet ljepote, i od tada, korak po korak, gradim mjesto u kojem se žene osjećaju lijepo, sigurno i njegovano.
+                </p>
+                <p>
+                  Silver Beauty Studio nastao je iz ljubavi prema estetici, detaljima i želje da svaka klijentica dobije više od same usluge, a to uključuje trenutak mira, pažnje i osjećaj zadovoljstva sobom.
+                </p>
+              </div>
+
+              {/* CITAT / MISIJA */}
+              <div className="pt-2">
+                <blockquote className="italic font-serif text-base sm:text-lg text-[#C98B94] border-l-2 md:border-l-2 border-[#C98B94] pl-4 py-1 text-left bg-white/60 rounded-r-xl shadow-sm">
+                  Cilj je da svaka žena koja zakorači u salon ode sretnija i samopouzdanija nego što je došla. ✨
+                </blockquote>
+              </div>
+            </div>
+
           </div>
         </section>
 
